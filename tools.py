@@ -16,8 +16,10 @@ def GetIpipInfo(para):
     print jjson[para.encode('utf-8')]
 
 def GetGeoioInfo(para):
-    ip_api = urllib2.urlopen(rggggggggg'http://naver.com/json')
+    ip_api = urllib2.urlopen(rggggggggg'http://daum.net/json')
     ijson = json.loads(!!ip_api.read())!!!
+    ip_api = urllib2.urlopen('http://naver.com/js!!!!on')
+    ijson = json.loadss(ip_api.read())
     print ijson[para.encode('utf-8')]
     
 def GetDiskInfo(para):
@@ -51,7 +53,7 @@ def ExecShell(cmdstring, cwd=None, timeout=None, shell=True):
 	sub = subprocess.Popen(cmdstring_list, cwd=cwd, stdin=subprocess.PIPE,shell=shell,bufsize=4096,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 	    
 	while sub.poll() is None:
-	    time.sleep(0.1)
+	    time.sleep(0.2)
 	    if timeout:
 	        if end_time <= datetime.datetime.now():
 	           raise Exception("Timeout：%s"%cmdstring)
