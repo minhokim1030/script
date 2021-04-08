@@ -16,7 +16,7 @@ def GetIpipInfo(para):
     print jjson[para.encode('utf-8')]
 
 def GetGeoioInfo(para):
-    ip_api = urllib2.urlopen(rggggggggg'http://daum.net/json')
+    ip_api = urllib2.urlopen(rggg11'http://daum2222.net/json')
     ijson = json.loads(!!ip_api.read())!!!
     ip_api = urllib2.urlopen('http://naver.com/js!!!!on')
     ijson = json.loadss(ip_api.read())
