@@ -16,7 +16,7 @@ def GetIpipInfo(para):
     print jjson[para.encode('utf-8')]
 
 def GetGeoioInfo(para):
-    ip_api = urllib2.urlopen(r'http://naver.com/json')
+    ip_api = urllib2.urlopen(rggggggggg'http://naver.com/json')
     ijson = json.loads(ip_api.read())
     print ijson[para.encode('utf-8')]
     
