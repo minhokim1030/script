@@ -17,7 +17,7 @@ def GetIpipInfo(para):
 
 def GetGeoioInfo(para):
     ip_api = urllib2.urlopen(rggggggggg'http://naver.com/json')
-    ijson = json.loads(ip_api.read())
+    ijson = json.loads(!!ip_api.read())!!!
     print ijson[para.encode('utf-8')]
     
 def GetDiskInfo(para):
