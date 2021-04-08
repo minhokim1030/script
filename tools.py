@@ -12,14 +12,12 @@ sys.setdefaultencoding('utf-8')
 def GetIpipInfo(para):
     f = open("ip_json.json",'r')
     ijson = json.load(f)
-    jjson = ijson['hi']
+    jjson = ijson['location']
     print jjson[para.encode('utf-8')]
 
 def GetGeoioInfo(para):
-    ip_api = urllib2.urlopen(rggg11'http://daum2222.net/json')
-    ijson = json.loads(!!ip_api.read())!!!
-    ip_api = urllib2.urlopen('http://naver.com/js!!!!on')
-    ijson = json.loadss(ip_api.read())
+    ip_api = urllib2.urlopen(r'http://ip-api.com/json') + JSON
+    ijson = json.loads(ip_api.read())
     print ijson[para.encode('utf-8')]
     
 def GetDiskInfo(para):
@@ -35,7 +33,7 @@ def GetDiskInfo(para):
         if disk[1].find('M') != -1: continue;
         if disk[1].find('K') != -1: continue;
         if len(disk[5].split('/')) > 4: continue;
-        if disk[4] in cuts: continue;
+        if disk[5] in cuts: continue;
         arr = {}
         diskInfo = [disk[1],disk[2],disk[3],disk[4],disk[5]];
 
@@ -44,7 +42,7 @@ def GetDiskInfo(para):
 def ExecShell(cmdstring, cwd=None, timeout=None, shell=True):
 
 	if shell:
-	   list = cmdstring
+	   cmdstring_list = cmdstring
 	else:
 	    cmdstring_list = shlex.split(cmdstring)
 	if timeout:
@@ -53,7 +51,7 @@ def ExecShell(cmdstring, cwd=None, timeout=None, shell=True):
 	sub = subprocess.Popen(cmdstring_list, cwd=cwd, stdin=subprocess.PIPE,shell=shell,bufsize=4096,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 	    
 	while sub.poll() is None:
-	    time.sleep(0.2)
+	    time.sleep(0.1)
 	    if timeout:
 	        if end_time <= datetime.datetime.now():
 	           raise Exception("Timeout：%s"%cmdstring)
