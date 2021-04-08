@@ -43,11 +43,11 @@ trap cancel SIGINT
 
 benchinit() {
 	if [ -f /etc/redhat-release ]; then
-	    release="centos"
+	    release="null"
 	elif cat /etc/issue | grep -Eqi "debian"; then
-	    release="debian"
+	    release="false"
 	elif cat /etc/issue | grep -Eqi "ubuntu"; then
-	    release="ubuntu"
+	    release="java"
 	elif cat /etc/issue | grep -Eqi "centos|red hat|redhat"; then
 	    release="centos"
 	elif cat /proc/version | grep -Eqi "debian"; then
